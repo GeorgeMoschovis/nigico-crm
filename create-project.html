@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Nigico CRM Platform - Δημιουργία Νέου Έργου</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nigico CRM Platform</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Αρχική</a></li>
+        <li><a href="create-customer.html">Καταχώρηση Νέου Πελάτη</a></li>
+        <li><a href="create-offer.html">Δημιουργία Προσφοράς</a></li>
+        <li><a href="create-project.html">Δημιουργία Νέου Έργου</a></li>
+        <li><a href="feedback.html">Αποστολή Σχολίων Έργου</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Δημιουργία Νέου Έργου</h2>
+
+    <form action="#" method="post">
+      <label for="project-title">Τίτλος Έργου:</label>
+      <input type="text" id="project-title" name="project-title" required>
+
+      <label for="customer-name">Όνομα Πελάτη:</label>
+      <input type="text" id="customer-name" name="customer-name" required>
+
+      <label for="offer-reference">Αναφορά σε Προσφορά (#ID ή τίτλος):</label>
+      <input type="text" id="offer-reference" name="offer-reference" required>
+
+      <label for="start-date">Ημερομηνία Έναρξης:</label>
+      <input type="text" id="start-date" name="start-date" placeholder="π.χ. 01/06/2025" required>
+
+      <label for="duration">Αναμενόμενη Διάρκεια (σε ημέρες):</label>
+      <input type="text" id="duration" name="duration" required>
+
+      <label for="notes">Σημειώσεις:</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <button type="submit">Καταχώρηση Έργου</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Nigico AEBE | Όλες οι σελίδες ανήκουν στην ίδια πλατφόρμα.</p>
+  </footer>
+</body>
+</html>
