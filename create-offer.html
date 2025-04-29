@@ -2,7 +2,7 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Nigico CRM Platform - Αποστολή Σχολίων Έργου</title>
+  <title>Nigico CRM Platform - Δημιουργία Προσφοράς</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,25 +24,32 @@
   </header>
 
   <main>
-    <h2>Αποστολή Σχολίων για Έργο</h2>
+    <h2>Δημιουργία και Αποστολή Προσφοράς</h2>
 
     <form action="#" method="post">
-      <label for="customer-name">Όνομα Πελάτη:</label>
+      <label for="customer-name">Πελάτης:</label>
       <input type="text" id="customer-name" name="customer-name" required>
 
-      <label for="project-id">Κωδικός ή Τίτλος Έργου:</label>
-      <input type="text" id="project-id" name="project-id" required>
+      <label for="products">Προϊόντα / Υπηρεσίες:</label>
+      <textarea id="products" name="products" rows="4" placeholder="Π.χ. UPS 3kVA, Συντήρηση 1 έτους" required></textarea>
 
-      <label for="feedback">Σχόλια:</label>
-      <textarea id="feedback" name="feedback" rows="5" placeholder="Περιγράψτε την εμπειρία σας ή παρατηρήσεις σχετικά με το έργο..." required></textarea>
+      <label for="total-cost">Τελικό Κόστος (€):</label>
+      <input type="text" id="total-cost" name="total-cost" required>
 
-      <button type="submit">Υποβολή Σχολίων</button>
+      <label for="delivery-time">Χρόνος Παράδοσης (σε ημέρες):</label>
+      <input type="text" id="delivery-time" name="delivery-time" required>
+
+      <label for="email">Email Πελάτη για αποστολή:</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Αποστολή Προσφοράς</button>
     </form>
   </main>
 
   <footer>
     <p>© 2025 Nigico AEBE | Όλες οι σελίδες ανήκουν στην ίδια πλατφόρμα.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>Nigico CRM Platform - Αποστολή Σχολίων Έργου</title>
+  <title>Nigico CRM Platform - Νέος Πελάτης</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,25 +24,32 @@
   </header>
 
   <main>
-    <h2>Αποστολή Σχολίων για Έργο</h2>
+    <h2>Καταχώρηση Νέου Πελάτη</h2>
 
     <form action="#" method="post">
-      <label for="customer-name">Όνομα Πελάτη:</label>
-      <input type="text" id="customer-name" name="customer-name" required>
+      <label for="company-name">Επωνυμία Εταιρείας:</label>
+      <input type="text" id="company-name" name="company-name" required>
 
-      <label for="project-id">Κωδικός ή Τίτλος Έργου:</label>
-      <input type="text" id="project-id" name="project-id" required>
+      <label for="contact-name">Υπεύθυνος Επικοινωνίας:</label>
+      <input type="text" id="contact-name" name="contact-name" required>
 
-      <label for="feedback">Σχόλια:</label>
-      <textarea id="feedback" name="feedback" rows="5" placeholder="Περιγράψτε την εμπειρία σας ή παρατηρήσεις σχετικά με το έργο..." required></textarea>
+      <label for="email">Email Επικοινωνίας:</label>
+      <input type="email" id="email" name="email" required>
 
-      <button type="submit">Υποβολή Σχολίων</button>
+      <label for="phone">Τηλέφωνο:</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label for="category">Κατηγορία Πελάτη:</label>
+      <input type="text" id="category" name="category" placeholder="π.χ. Δημόσιος/Ιδιωτικός τομέας" required>
+
+      <button type="submit">Καταχώρηση Πελάτη</button>
     </form>
   </main>
 
   <footer>
     <p>© 2025 Nigico AEBE | Όλες οι σελίδες ανήκουν στην ίδια πλατφόρμα.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

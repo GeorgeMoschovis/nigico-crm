@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
@@ -10,6 +10,13 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #003366;
+    z-index: 100;
 }
 
 nav ul {
@@ -69,8 +76,82 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #0055aa;
+  transform: scale(1.05);
 }
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .header-content img.logo {
+    height: 50px;
+  }
+  
+  .header-content h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .spacer {
+    width: 50px; /* Μικρό κενό για ισορροπία */
+  }
+
+  /* Notification banner */
+.notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .notification.success {
+    background-color: #28a745;
+  }
+  
+  .notification.error {
+    background-color: #dc3545;
+  }
+  
+  .notification.show {
+    top: 20px;
+    opacity: 1;
+  }
+  
+  /* Active link */
+  nav a.active-link {
+    text-decoration: underline;
+    color: #ffcc00;
+  }
+  
+  /* Shake animation για λάθος input */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  input.shake, textarea.shake {
+    animation: shake 0.5s;
+  }
+  
