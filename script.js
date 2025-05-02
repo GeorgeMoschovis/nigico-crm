@@ -1,19 +1,19 @@
-// ✅ Όταν φορτωθεί η σελίδα
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     if (form) {
       form.addEventListener("submit", function (event) {
         event.preventDefault(); // Ακύρωση κανονικής υποβολής
         if (validateForm(form)) {
-          showNotification("✅ Η καταχώρηση υποβλήθηκε επιτυχώς!", "success");
+          showNotification("Η καταχώρηση υποβλήθηκε επιτυχώς!", "success");
           form.reset();
         } else {
-          showNotification("❌ Παρακαλώ συμπληρώστε όλα τα απαιτούμενα πεδία.", "error");
+          showNotification("Παρακαλώ συμπληρώστε όλα τα απαιτούμενα πεδία.", "error");
         }
       });
     }
   
-    // ✅ Highlight του active link
+    // Highlight του active link
     const links = document.querySelectorAll("nav a");
     links.forEach(link => {
       if (link.href === window.location.href) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // ✅ Δυναμικό notification banner
+  // notification banner
   function showNotification(message, type) {
     const notification = document.createElement("div");
     notification.className = `notification ${type}`;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000); // φεύγει μετά από 3 δευτερόλεπτα
   }
   
-  // ✅ Έλεγχος για κενά πεδία
+  // Έλεγχος για κενά πεδία
   function validateForm(form) {
     let valid = true;
     const inputs = form.querySelectorAll("input[required], textarea[required]");
